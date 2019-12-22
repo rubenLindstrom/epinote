@@ -1,17 +1,14 @@
-import React, { useState, useEffect, useContext } from "react";
+import React from "react";
 import "./App.css";
-import { FirebaseContext } from "./contexts/firebase";
+
+import Sidebar from "./components/sidebar/sidebar";
+import Editor from "./components/editor/editor";
 
 const App = () => {
-  const [selectedNoteIndex, setSelectedNoteIndex] = useState(null);
-  const [selectedNote, setSelectedNote] = useState(null);
-  const [notes, setNotes] = useState(null);
-
-  useEffect(() => {}, []);
-
   return (
-    <div className="App">
-      <h1>App</h1>
+    <div className="app-container">
+      <Sidebar />
+      <Editor />
     </div>
   );
 };
